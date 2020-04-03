@@ -8,6 +8,7 @@
     <!--  wp head not really beautiful  -->
     <?php wp_head(); ?>
     <title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
+    <link rel="stylesheet" href="<?= get_stylesheet_directory_uri(); ?>/assets/css/bundle.css">
 </head>
 <body>
 <header class="header">

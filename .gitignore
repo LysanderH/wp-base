@@ -19,6 +19,8 @@ wp-content/plugins/*
 # specify (see the commented-out example for a hint on how to do this.)
 wp-content/themes/*
 !wp-content/themes/basic-project/
+#ignore asset files
+wp-content/themes/basic-project/assets/
 
 # ignore node dependency directories
 wp-content/themes/basic-project/node_modules/
