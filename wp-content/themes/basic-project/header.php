@@ -10,3 +10,8 @@
     <title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
 </head>
 <body>
+<header class="header">
+    <h1><?php the_title(); ?></h1>
+
+</header>
+<main>
