@@ -14,6 +14,7 @@
 <body>
 <header class="header">
     <h1><?= bp_get_title('-', false); ?></h1>
-
+<?php wp_nav_menu(['theme_location'=>'main']); ?>
+<?php wp_nav_menu(['theme_location'=>'socials']); ?>
 </header>
 <main>
