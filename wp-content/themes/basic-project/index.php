@@ -18,15 +18,15 @@
             <?php the_excerpt(); ?>
         </div>
         <footer class="post__cta">
-            <a href="<?php the_permalink(); ?>" class="post__link">Voir l'article <span
-                        class="sro">"<?php the_title(); ?>"</span> en entier</a>
+            <a href="<?php the_permalink(); ?>" class="post__link"><?= __('Voir l\'article', 'dp'); ?> <span
+                        class="sro">"<?php the_title(); ?>"</span></a>
         </footer>
     </article>
 <?php endwhile; endif; ?>
 <?= paginate_links(); ?>
 
     <section class="latest-trips">
-        <h2>Mes derniers voyages</h2>
+        <h2><?= __('Mes derniers voyages', 'dp'); ?></h2>
         <?php
         $loop = new WP_Query([
             'post_type' => 'trip',
@@ -40,16 +40,16 @@
                     <?php the_title(); ?>
                 </h3>
                 <dl>
-                    <dt>Départ</dt>
+                    <dt><?= __('Départ', 'dp'); ?></dt>
                     <dd><?php the_field('arrival'); ?></dd>
-                    <dt>Fin</dt>
+                    <dt><?= __('Retour', 'dp'); ?></dt>
                     <dd><?php the_field('end'); ?></dd>
                 </dl>
                 <div class="trip__content">
                     <?php the_excerpt(); ?>
                 </div>
                 <footer class="trip__cta">
-                    <a href="<?php the_permalink(); ?>" class="trip__link">Voir le voyage <span
+                    <a href="<?php the_permalink(); ?>" class="trip__link"><?= __('Voir le voyage', 'dp'); ?> <span
                                 class="sro">"<?php the_title(); ?>"</span></a>
                 </footer>
             </article>
