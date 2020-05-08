@@ -81,11 +81,19 @@ register_post_type('trip', [
     'labels' => [
         'name' => 'Voyages',
         'singular_name' => 'Voyage',
-        'add_new'=>'Ajouter nouveau',
-        'add_new_item'=>'Ajouter un nouveau voyage'
+        'add_new' => 'Ajouter nouveau',
+        'add_new_item' => 'Ajouter un nouveau voyage'
     ],
     'description' => 'Les récits de voyage que j’ai vécu',
     'public' => true,
-    'menu_position'=>5,
-    'menu_icon'=>'dashicons-palmtree',
+    'menu_position' => 5,
+    'menu_icon' => 'dashicons-palmtree',
 ]);
+
+/**
+ *
+ */
+function bp_register_query_vars($vars){
+    $vars[]='trips-pagination';
+}
+add_filter('query_vars','bp_register_query_vars');
