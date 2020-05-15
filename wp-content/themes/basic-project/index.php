@@ -45,6 +45,7 @@
                     <dt><?= __('Retour', 'dp'); ?></dt>
                     <dd><?php the_field('end'); ?></dd>
                 </dl>
+                <?php the_post_thumbnail('post-cover', ['class' => 'trip__thumbnail']); ?>
                 <div class="trip__content">
                     <?php the_excerpt(); ?>
                 </div>
