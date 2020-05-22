@@ -17,11 +17,11 @@
             <fieldset class="form__fieldset">
                 <div>
                     <label for="name" class="form__label">Nom</label>
-                    <input type="text" name="bp_name" class="form__input" id="name">
+                    <input type="text" name="bp_name" class="form__input" id="name" value="<?= $feedback['bp_name']; ?>">
                 </div>
                 <div>
                     <label for="content" class="form__label">Votre message</label>
-                    <textarea class="form__input" name="bp_message" id="content"></textarea>
+                    <textarea class="form__input" name="bp_message" id="content"><?= $feedback['bp_message']; ?></textarea>
                 </div>
                 <input type="hidden" name="_wpnonce" value="<?= wp_create_nonce('bp_custom_form') ?>">
                 <input type="hidden" name="action" value="bp_custom_form_treatment">

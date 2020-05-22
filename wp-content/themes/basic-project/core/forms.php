@@ -7,6 +7,7 @@ function bp_start_session()
 {
     if (session_id()) return;
     session_start();
+
 }
 
 function bp_handleForm()
